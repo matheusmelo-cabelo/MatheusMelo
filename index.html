@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Matheus Melo - Portfólio</title>
+
+    <!-- Incluindo a fonte Inter -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para ícones profissionais -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- Tailwind CSS via CDN -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Estilos personalizados que não podem ser feitos com Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Gradiente para o texto do nome */
+        .gradient-text {
+            background-image: linear-gradient(135deg, #ffffff 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animação 3D do card de competência */
+        .competencia-inner {
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .flipped .competencia-inner {
+            transform: rotateY(180deg);
+        }
+
+        .competencia-front, .competencia-back {
+            backface-visibility: hidden;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .competencia-back {
+            transform: rotateY(180deg);
+            background: #1f1f21;
+            padding: 2rem;
+        }
+
+        /* Estilo para o 'quote' da filosofia */
+        .filosofia-quote::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            font-size: 4rem;
+            color: rgba(255, 215, 0, 0.2);
+            font-family: serif;
+        }
+
+        /* Animação e estado para os cards de contato */
+        .contato-card {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contato-content {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .contato-info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contato-card.active .contato-content {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        .contato-card.active .contato-info {
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body class="bg-zinc-950 text-white min-h-screen antialiased">
+
+    <div class="container mx-auto px-4 md:px-0 max-w-4xl py-12 md:py-24">
+
+
+
+        <!-- Seção do Cabeçalho -->
+
+        <header class="text-center mb-16 md:mb-24">
+
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-2 gradient-text">Matheus Melo</h1>
+
+            <p class="text-xl md:text-2xl text-yellow-400 font-semibold mb-2">Especialista em Blockchain, IA & Tecnologias Emergentes</p>
+
+            <div class="flex flex-col md:flex-row md:space-x-4 justify-center items-center mb-8">
+
+                <div class="flex items-center space-x-2">
+
+                    <span class="text-xl">🧠</span>
+
+                    <span class="text-xl">🛸</span>
+
+                    <span class="text-xl">🤝</span>
+
+                </div>
+
+                <div class="flex items-center space-x-2 mt-2 md:mt-0">
+
+                    <span class="text-white text-lg font-medium">Bitcoin • Inteligência Artificial • Impacto Social</span>
+
+                </div>
+
+            </div>
+
+            <div class="flex justify-center space-x-6 text-2xl">
+
+                <!-- Links para redes sociais com efeito de hover -->
+
+                <a href="https://github.com/matheusmelo-cabelo" target="_blank" class="text-white hover:text-yellow-400 transition-colors duration-300">
+
+                    <i class="fab fa-github"></i>
+
+                </a>
+
+                <a href="https://www.linkedin.com/in/matheus-melo-3ab20b325" target="_blank" class="text-white hover:text-yellow-400 transition-colors duration-300">
+
+                    <i class="fab fa-linkedin"></i>
+
+                </a>
+
+                <a href="https://instagram.com/0matheusmelo" target="_blank" class="text-white hover:text-yellow-400 transition-colors duration-300">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <main>
+
+            <!-- Seção "Quem Sou Eu" -->
+
+            <section class="mb-16 md:mb-24 pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">Quem Sou Eu</h2>
+
+                <p class="text-base md:text-lg text-zinc-300 leading-relaxed text-justify">
+
+                    Sou profissional de tecnologia, com foco em inteligência artificial e criptomoedas. Atuo desde 2020 no mercado de criptoativos, principalmente com Bitcoin e estratégias de autocustódia, e expandi minha atuação para a área de IA, explorando aplicações práticas para negócios e pessoas.
+
+                    <br><br>
+
+                    Minha experiência combina conhecimento técnico, visão estratégica de investimentos e interesse por soluções inovadoras. Meu objetivo é conectar tecnologia e impacto humano, ajudando pessoas e organizações a navegarem o futuro digital de forma segura e inteligente.
+
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+
+                    <div class="bg-yellow-900/10 border border-yellow-800/30 rounded-lg p-4 text-center">
+
+                        <span class="block text-2xl mb-1">₿</span>
+
+                        <span class="text-sm text-yellow-400 font-semibold">Bitcoin desde 2020</span>
+
+                    </div>
+
+                    <div class="bg-yellow-900/10 border border-yellow-800/30 rounded-lg p-4 text-center">
+
+                        <span class="block text-2xl mb-1">🤖</span>
+
+                        <span class="text-sm text-yellow-400 font-semibold">IA Aplicada</span>
+
+                    </div>
+
+                    <div class="bg-yellow-900/10 border border-yellow-800/30 rounded-lg p-4 text-center">
+
+                        <span class="block text-2xl mb-1">🤝</span>
+
+                        <span class="text-sm text-yellow-400 font-semibold">Impacto Social</span>
+
+                    </div>
+
+                    <div class="bg-yellow-900/10 border border-yellow-800/30 rounded-lg p-4 text-center">
+
+                        <span class="block text-2xl mb-1">🚀</span>
+
+                        <span class="text-sm text-yellow-400 font-semibold">1000+ Clientes</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- Seção "Minha Jornada" -->
+
+            <section class="mb-16 md:mb-24 pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">Minha Jornada</h2>
+
+                <div class="relative max-w-xl mx-auto">
+
+                    <!-- Linha do tempo vertical -->
+
+                    <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-yellow-800/30"></div>
+
+                    
+
+                    <div class="relative pl-12 pb-8">
+
+                        <div class="absolute left-3 top-2 w-4 h-4 rounded-full bg-yellow-400 border-2 border-zinc-950"></div>
+
+                        <p class="font-semibold text-white text-lg">2020</p>
+
+                        <p class="text-zinc-300">Começo a estudar Bitcoin e o conceito de autocustódia, mergulhando no mercado de criptoativos.</p>
+
+                    </div>
+
+
+
+                    <div class="relative pl-12 pb-8">
+
+                        <div class="absolute left-3 top-2 w-4 h-4 rounded-full bg-yellow-400 border-2 border-zinc-950"></div>
+
+                        <p class="font-semibold text-white text-lg">2022</p>
+
+                        <p class="text-zinc-300">Entro em sociedade em uma empresa de consultoria em cripto e trading, e me torno sócio do time de E-sports Angels, que alcançou o 4º lugar da LBFF.</p>
+
+                    </div>
+
+
+
+                    <div class="relative pl-12 pb-8">
+
+                        <div class="absolute left-3 top-2 w-4 h-4 rounded-full bg-yellow-400 border-2 border-zinc-950"></div>
+
+                        <p class="font-semibold text-white text-lg">2023</p>
+
+                        <p class="text-zinc-300">Inicio a consultoria para o projeto de trading autônomo com IA, aplicando meu conhecimento em gestão de risco.</p>
+
+                    </div>
+
+
+
+                    <div class="relative pl-12 pb-8">
+
+                        <div class="absolute left-3 top-2 w-4 h-4 rounded-full bg-yellow-400 border-2 border-zinc-950"></div>
+
+                        <p class="font-semibold text-white text-lg">2024</p>
+
+                        <p class="text-zinc-300">Expando meu foco para a Inteligência Artificial e suas aplicações, especialmente em automação de processos.</p>
+
+                    </div>
+
+
+
+                    <div class="relative pl-12">
+
+                        <div class="absolute left-3 top-2 w-4 h-4 rounded-full bg-yellow-400 border-2 border-zinc-950"></div>
+
+                        <p class="font-semibold text-white text-lg">2025</p>
+
+                        <p class="text-zinc-300">Começo a implementar soluções de IA para otimizar fluxos de trabalho em empresas, focando em gerar mais tempo livre.</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            
+
+            <!-- Seção "Áreas de Atuação" com cards interativos -->
+
+            <section class="mb-16 md:mb-24 pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">Áreas de Atuação</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Card de Automação com IA -->
+
+                    <div class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-900/40 cursor-pointer h-[280px] relative" onclick="flipCard(this)">
+
+                        <div class="competencia-inner">
+
+                            <div class="competencia-front flex flex-col justify-between">
+
+                                <div class="flex items-center space-x-4 mb-4">
+
+                                    <i class="fa-solid fa-robot text-2xl text-yellow-400"></i>
+
+                                    <h3 class="text-xl font-semibold text-white">Automação com IA</h3>
+
+                                </div>
+
+                                <div class="flex flex-wrap gap-2">
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Desenvolvimento de Agentes</span>
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Otimização de Processos</span>
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Engenharia de Prompt</span>
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Chatbots</span>
+
+                                </div>
+
+                                <div class="mt-4 text-center">
+
+                                    <a href="https://wa.me/message/MIIC64LIL3QCO1" target="_blank" onclick="event.stopPropagation();">
+
+                                        <button class="bg-yellow-500 hover:bg-yellow-600 text-zinc-900 font-bold py-2 px-4 rounded-full transition-colors duration-200">
+
+                                            Agendar consultoria
+
+                                        </button>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="competencia-back bg-zinc-800 rounded-2xl p-8">
+
+                                <h4 class="text-lg font-semibold text-yellow-400 text-center mb-4">Recursos de IA</h4>
+
+                                <div class="flex flex-col space-y-3">
+
+                                    <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-solid fa-book-open"></i><span>Guia de Prompts (e-book)</span></a>
+
+                                    <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-solid fa-chart-line"></i><span>Case de Sucesso de Vendas</span></a>
+
+                                    <a href="https://wa.me/message/MIIC64LIL3QCO1" target="_blank" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-solid fa-calendar-check"></i><span>Agendar Consultoria</span></a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Card de Blockchain & Cripto -->
+
+                    <div class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-900/40 cursor-pointer h-[280px] relative" onclick="flipCard(this)">
+
+                        <div class="competencia-inner">
+
+                            <div class="competencia-front flex flex-col justify-between">
+
+                                <div class="flex items-center space-x-4 mb-4">
+
+                                    <i class="fa-brands fa-bitcoin text-2xl text-yellow-400"></i>
+
+                                    <h3 class="text-xl font-semibold text-white">Blockchain & Cripto</h3>
+
+                                </div>
+
+                                <div class="flex flex-wrap gap-2">
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">4+ Anos de Experiência</span>
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Autocustódia</span>
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Hardware Wallets</span>
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Estratégias de Investimento</span>
+
+                                </div>
+
+                                <div class="mt-4 text-center">
+
+                                    <button class="bg-yellow-500 hover:bg-yellow-600 text-zinc-900 font-bold py-2 px-4 rounded-full transition-colors duration-200" onclick="event.stopPropagation(); showBlockchainModal();">
+
+                                        Explicar Conceito ✨
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="competencia-back bg-zinc-800 rounded-2xl p-8">
+
+                                <h4 class="text-lg font-semibold text-yellow-400 text-center mb-4">Recursos de Cripto</h4>
+
+                                <div class="flex flex-col space-y-3">
+
+                                    <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-solid fa-book-open"></i><span>Guia de Auto-custódia</span></a>
+
+                                    <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-solid fa-lock"></i><span>Hardware Wallets Recomendadas</span></a>
+
+                                    <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-solid fa-money-bill-transfer"></i><span>Exchanges Confiáveis</span></a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Card de Mercado Financeiro -->
+
+                    <div class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-900/40 cursor-pointer h-[280px] relative" onclick="flipCard(this)">
+
+                        <div class="competencia-inner">
+
+                            <div class="competencia-front flex flex-col justify-between">
+
+                                <div class="flex items-center space-x-4 mb-4">
+
+                                    <i class="fa-solid fa-chart-line text-2xl text-yellow-400"></i>
+
+                                    <h3 class="text-xl font-semibold text-white">Mercado Financeiro</h3>
+
+                                </div>
+
+                                <div class="flex flex-wrap gap-2">
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Planejamento Financeiro</span>
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Gestão de Risco</span>
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Análise de Ativos</span>
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Estratégia de Investimento</span>
+
+                                </div>
+
+                                <div class="mt-4 text-center">
+
+                                    <a href="https://wa.me/message/MIIC64LIL3QCO1" target="_blank" onclick="event.stopPropagation();">
+
+                                        <button class="bg-yellow-500 hover:bg-yellow-600 text-zinc-900 font-bold py-2 px-4 rounded-full transition-colors duration-200">
+
+                                            Agendar consultoria
+
+                                        </button>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="competencia-back bg-zinc-800 rounded-2xl p-8">
+
+                                <h4 class="text-lg font-semibold text-yellow-400 text-center mb-4">Recursos de Mercado</h4>
+
+                                <div class="flex flex-col space-y-3">
+
+                                    <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-solid fa-certificate"></i><span>CEA ANBIMA (em andamento)</span></a>
+
+                                    <a href="https://t.me/seu_grupo_telegram" target="_blank" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-brands fa-telegram-plane"></i><span>Análises de Mercado (Grupo Telegram)</span></a>
+
+                                    <a href="https://wa.me/message/MIIC64LIL3QCO1" target="_blank" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-solid fa-briefcase"></i><span>Consultoria de Investimentos</span></a>
+
+                                    <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-solid fa-building-columns"></i><span>Corretoras Recomendadas</span></a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Novo Card de Produção de Conteúdo -->
+
+                    <div class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-900/40 cursor-pointer h-[280px] relative" onclick="flipCard(this)">
+
+                        <div class="competencia-inner">
+
+                            <div class="competencia-front flex flex-col justify-between">
+
+                                <div class="flex items-center space-x-4 mb-4">
+
+                                    <i class="fa-solid fa-file-invoice card-icon"></i>
+
+                                    <h3 class="card-title">Produção de Conteúdo</h3>
+
+                                </div>
+
+                                <div class="flex flex-wrap gap-2">
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Curadoria</span>
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Vídeos Educacionais</span>
+
+                                    <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Textos Estratégicos</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="competencia-back bg-zinc-800 rounded-2xl p-8">
+
+                                <h4 class="text-lg font-semibold text-yellow-400 text-center mb-4">Trabalhos e Colaborações</h4>
+
+                                <div class="flex flex-col space-y-3">
+
+                                    <a href="https://www.youtube.com/@omatheusmelo0" target="_blank" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-brands fa-youtube"></i><span>Canal no YouTube</span></a>
+
+                                    <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-solid fa-pen-to-square"></i><span>Blog Pessoal</span></a>
+
+                                    <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-solid fa-microphone-lines"></i><span>Podcasts Participados</span></a>
+
+                                    <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors duration-200"><i class="fa-solid fa-newspaper"></i><span>Artigos e Entrevistas</span></a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            
+
+            <!-- Seção "Projetos Relevantes" -->
+
+            <section class="mb-16 md:mb-24 pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">Projetos Relevantes</h2>
+
+                <div class="space-y-8">
+
+                    <!-- Projeto 1: "Blockchain para Missões Humanitárias" -->
+
+                    <article class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-yellow-900/40">
+
+                        <h3 class="text-xl md:text-2xl font-semibold text-white mb-2">Blockchain para Missões Humanitárias</h3>
+
+                        <p class="text-base text-zinc-400 mb-4 leading-relaxed">
+
+                            Plataforma para transferências instantâneas e seguras para missionários em países restritivos, eliminando barreiras governamentais e reduzindo custos.
+
+                        </p>
+
+                        <p class="text-base text-yellow-400 font-semibold mb-2">
+
+                            Impacto: <span class="text-white font-normal">Transferências 24/7 resistentes à censura, eliminação de barreiras governamentais.</span>
+
+                        </p>
+
+                        <span class="inline-block bg-yellow-900/30 text-yellow-400 px-4 py-1.5 rounded-full text-sm font-medium border border-yellow-800/30">Em desenvolvimento</span>
+
+                    </article>
+
+
+
+                    <!-- Projeto 2: "Agente de IA para Consultório Médico" -->
+
+                    <article class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-yellow-900/40">
+
+                        <h3 class="text-xl md:text-2xl font-semibold text-white mb-2">Agente de IA para Consultório Médico</h3>
+
+                        <p class="text-base text-zinc-400 mb-4 leading-relaxed">
+
+                            Solução de automação que eliminou a perda de 100 leads por dia, otimizando o fluxo de atendimento do consultório médico.
+
+                        </p>
+
+                        <p class="text-base text-yellow-400 font-semibold mb-2">
+
+                            Impacto: <span class="text-white font-normal">200 leads/dia atendidos, ROI em tráfego preservado.</span>
+
+                        </p>
+
+                        <span class="inline-block bg-green-900/30 text-green-400 px-4 py-1.5 rounded-full text-sm font-medium border border-green-800/30">Implementado</span>
+
+                    </article>
+
+                    
+
+                    <!-- Projeto 3: "Plataforma de Trading Autônomo com IA" -->
+
+                    <article class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-yellow-900/40">
+
+                        <h3 class="text-xl md:text-2xl font-semibold text-white mb-2">Plataforma de Trading Autônomo com IA</h3>
+
+                        <p class="text-base text-zinc-400 mb-4 leading-relaxed">
+
+                            Sistema de análise de 1000+ ativos simultaneamente com decisões automatizadas e gestão de risco inteligente.
+
+                        </p>
+
+                        <p class="text-base text-yellow-400 font-semibold mb-2">
+
+                            Impacto: <span class="text-white font-normal">80% de taxa de acerto, gestão de risco automatizada.</span>
+
+                        </p>
+
+                        <span class="inline-block bg-yellow-900/30 text-yellow-400 px-4 py-1.5 rounded-full text-sm font-medium border border-yellow-800/30">Em desenvolvimento final</span>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- Seção "Testemunhos" -->
+
+            <section class="mb-16 md:mb-24 pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">O que dizem sobre mim</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <div class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 italic">
+
+                        <p class="text-zinc-300 leading-relaxed mb-4">"A consultoria do Matheus foi essencial para eu me sentir seguro. Sua orientação sobre autocustódia me fez evitar um grande golpe. Ele não só entende de tecnologia, mas se importa com as pessoas."</p>
+
+                        <p class="font-semibold text-yellow-400">- Cliente de Consultoria</p>
+
+                    </div>
+
+                    <div class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 italic">
+
+                        <p class="text-zinc-300 leading-relaxed mb-4">"A abordagem do Matheus de usar IA para otimizar processos é fantástica. Ele traduz a tecnologia de forma simples e mostra o real impacto que ela pode ter no seu negócio."</p>
+
+                        <p class="font-semibold text-yellow-400">- Sócio de Projeto</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- Seção de Blog & Artigos -->
+
+            <section class="mb-16 md:mb-24 pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">Blog & Artigos</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <article class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-6 transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-yellow-900/40">
+
+                        <h3 class="text-lg font-semibold text-white mb-2">O Futuro das Finanças: IA e Blockchain</h3>
+
+                        <p class="text-sm text-zinc-400 leading-relaxed">Uma análise sobre como a união da inteligência artificial e da tecnologia blockchain está revolucionando o mercado financeiro e os investimentos pessoais.</p>
+
+                        <a href="#" class="mt-4 inline-block text-yellow-400 hover:text-yellow-500 font-medium">Leia mais <i class="fa-solid fa-arrow-right ml-1"></i></a>
+
+                    </article>
+
+                    <article class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-6 transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-yellow-900/40">
+
+                        <h3 class="text-lg font-semibold text-white mb-2">Guia Completo de Autocustódia de Criptomoedas</h3>
+
+                        <p class="text-sm text-zinc-400 leading-relaxed">Tudo o que você precisa saber para proteger seus ativos digitais, com dicas práticas sobre hardware wallets, senhas e segurança online.</p>
+
+                        <a href="#" class="mt-4 inline-block text-yellow-400 hover:text-yellow-500 font-medium">Leia mais <i class="fa-solid fa-arrow-right ml-1"></i></a>
+
+                    </article>
+
+                    <article class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-6 transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-yellow-900/40">
+
+                        <h3 class="text-lg font-semibold text-white mb-2">IA para Negócios: Otimizando Fluxos de Trabalho</h3>
+
+                        <p class="text-sm text-zinc-400 leading-relaxed">Descubra como a automação inteligente pode liberar tempo valioso para você e sua equipe, focando no que realmente importa.</p>
+
+                        <a href="#" class="mt-4 inline-block text-yellow-400 hover:text-yellow-500 font-medium">Leia mais <i class="fa-solid fa-arrow-right ml-1"></i></a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+
+
+            <!-- Seção "Visão & Filosofia" -->
+
+            <section class="mb-16 md:mb-24 pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">Visão & Filosofia</h2>
+
+                <div class="bg-yellow-900/10 border border-yellow-800/30 rounded-2xl p-8 md:p-12 text-center relative filosofia-quote">
+
+                    <p class="text-lg md:text-xl text-zinc-300 leading-relaxed italic">
+
+                        Acredito que o futuro pertence àqueles que conseguem unir conhecimento, tecnologia e propósito. Minha missão é explorar as fronteiras entre inteligência artificial e blockchain para criar soluções que não dependem de governos ou instituições, mas sim da colaboração entre pessoas.
+
+                        <br><br>
+
+                        Sonho com um mundo onde a tecnologia cuida do "online" para que possamos viver mais no "offline" – onde sistemas inteligentes automatizam o trabalho complexo, liberando nosso tempo para o que realmente importa: família, crescimento pessoal e qualidade de vida.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- Seção "Contato" -->
+
+            <section class="pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">Contato</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+
+                    <!-- Item de Contato E-mail -->
+
+                    <div class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-xl p-6 text-center transition-transform duration-300 hover:scale-105 cursor-pointer contato-card" onclick="toggleContact(this)">
+
+                        <div class="contato-content">
+
+                            <div class="text-xl text-yellow-400 mb-2"><i class="fa-solid fa-envelope"></i></div>
+
+                            <div class="text-xs text-zinc-500 uppercase font-semibold tracking-wide">E-mail</div>
+
+                        </div>
+
+                        <div class="contato-info">
+
+                            <div class="text-base text-yellow-400 truncate font-medium">backup.matheusmelo@gmail.com</div>
+
+                            <button class="bg-yellow-900/20 text-yellow-400 text-xs px-2 py-1 rounded-md mt-2 hover:bg-yellow-900/40 transition-colors" onclick="copyContact('backup.matheusmelo@gmail.com', event)">Copiar</button>
+
+                        </div>
+
+                    </div>
+
+                    
+
+                    <!-- Item de Contato WhatsApp -->
+
+                    <div class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-xl p-6 text-center transition-transform duration-300 hover:scale-105 cursor-pointer contato-card" onclick="toggleContact(this)">
+
+                        <div class="contato-content">
+
+                            <div class="text-xl text-yellow-400 mb-2"><i class="fa-brands fa-whatsapp"></i></div>
+
+                            <div class="text-xs text-zinc-500 uppercase font-semibold tracking-wide">WhatsApp</div>
+
+                        </div>
+
+                        <div class="contato-info">
+
+                            <div class="text-base text-yellow-400 truncate font-medium">+55 (21) 99376-5041</div>
+
+                            <button class="bg-yellow-900/20 text-yellow-400 text-xs px-2 py-1 rounded-md mt-2 hover:bg-yellow-900/40 transition-colors" onclick="copyContact('+55 (21) 99376-5041', event)">Copiar</button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Item de Contato Instagram (CTA Direto) -->
+
+                    <a href="https://instagram.com/0matheusmelo" target="_blank" class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-xl p-6 text-center transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col justify-center">
+
+                        <div class="text-xl text-yellow-400 mb-2"><i class="fa-brands fa-instagram"></i></div>
+
+                        <div class="text-xs text-zinc-500 uppercase font-semibold tracking-wide">Instagram</div>
+
+                        <div class="text-base text-white truncate font-medium mt-1">@0matheusmelo</div>
+
+                    </a>
+
+                    
+
+                    <!-- Item de Contato LinkedIn (CTA Direto) -->
+
+                    <a href="https://www.linkedin.com/in/matheus-melo-3ab20b325" target="_blank" class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-xl p-6 text-center transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col justify-center">
+
+                        <div class="text-xl text-yellow-400 mb-2"><i class="fa-brands fa-linkedin-in"></i></div>
+
+                        <div class="text-xs text-zinc-500 uppercase font-semibold tracking-wide">LinkedIn</div>
+
+                        <div class="text-base text-white truncate font-medium mt-1">linkedin.com/in/matheus-melo-3ab20b325</div>
+
+                    </a>
+
+
+
+                    <!-- Item de Contato YouTube (CTA Direto) -->
+
+                    <a href="https://www.youtube.com/@omatheusmelo0" target="_blank" class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-xl p-6 text-center transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col justify-center">
+
+                        <div class="text-xl text-yellow-400 mb-2"><i class="fa-brands fa-youtube"></i></div>
+
+                        <div class="text-xs text-zinc-500 uppercase font-semibold tracking-wide">YouTube</div>
+
+                        <div class="text-base text-white truncate font-medium mt-1">@omatheusmelo0</div>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- Modais para as funcionalidades da API do Gemini -->
+
+    <div id="automation-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+
+        <div class="bg-zinc-900 border border-yellow-800/30 rounded-2xl p-8 w-full max-w-lg relative">
+
+            <button class="absolute top-4 right-4 text-zinc-400 hover:text-white" onclick="closeModal('automation-modal')">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">Obter um Plano de Automação ✨</h3>
+
+            <p class="text-zinc-300 mb-4">Descreva um problema ou processo da sua empresa em que a IA poderia ajudar. O Gemini vai sugerir um plano básico para você.</p>
+
+            <textarea id="automation-prompt" class="w-full h-32 bg-zinc-800 border border-yellow-800/30 rounded-lg p-4 text-white placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-yellow-400 resize-none mb-4" placeholder="Ex: 'Otimizar o processo de triagem de currículos para 1000 candidatos por mês.'"></textarea>
+
+            <button id="automation-generate-btn" class="w-full bg-yellow-500 hover:bg-yellow-600 text-zinc-900 font-bold py-3 rounded-full transition-colors duration-200" onclick="generateAutomationPlan()">Gerar Plano de Automação</button>
+
+            <div id="automation-response" class="mt-6 p-4 bg-zinc-800 border border-yellow-800/30 rounded-lg hidden">
+
+                <div id="automation-loading" class="text-center" style="display: none;">
+
+                    <i class="fas fa-spinner fa-spin text-yellow-400 text-2xl"></i>
+
+                    <p class="text-zinc-400 mt-2">Gerando plano...</p>
+
+                </div>
+
+                <p id="automation-text-result" class="text-zinc-300 whitespace-pre-wrap"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="blockchain-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+
+        <div class="bg-zinc-900 border border-yellow-800/30 rounded-2xl p-8 w-full max-w-lg relative">
+
+            <button class="absolute top-4 right-4 text-zinc-400 hover:text-white" onclick="closeModal('blockchain-modal')">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">Explicar Conceito de Cripto ✨</h3>
+
+            <p class="text-zinc-300 mb-4">Digite um termo técnico de blockchain ou cripto e o Gemini irá explicar de forma simples e direta.</p>
+
+            <input type="text" id="blockchain-term" class="w-full bg-zinc-800 border border-yellow-800/30 rounded-lg p-4 text-white placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-yellow-400 mb-4" placeholder="Ex: 'Proof of Work' ou 'Autocustódia'">
+
+            <button id="blockchain-generate-btn" class="w-full bg-yellow-500 hover:bg-yellow-600 text-zinc-900 font-bold py-3 rounded-full transition-colors duration-200" onclick="explainBlockchainConcept()">Explicar Conceito</button>
+
+            <div id="blockchain-response" class="mt-6 p-4 bg-zinc-800 border border-yellow-800/30 rounded-lg hidden">
+
+                <div id="blockchain-loading" class="text-center" style="display: none;">
+
+                    <i class="fas fa-spinner fa-spin text-yellow-400 text-2xl"></i>
+
+                    <p class="text-zinc-400 mt-2">Explicando...</p>
+
+                </div>
+
+                <p id="blockchain-text-result" class="text-zinc-300 whitespace-pre-wrap"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+    <script>
+
+        // Função para virar os cards de competência
+
+        function flipCard(card) {
+
+            card.classList.toggle('flipped');
+
+        }
+
+
+
+        // Função para alternar a exibição do card de contato
+
+        function toggleContact(element) {
+
+            document.querySelectorAll('.contato-card').forEach(item => {
+
+                if (item !== element) {
+
+                    item.classList.remove('active');
+
+                }
+
+            });
+
+            element.classList.toggle('active');
+
+        }
+
+
+
+        // Função para copiar o texto para a área de transferência
+
+        function copyContact(textToCopy, event) {
+
+            event.stopPropagation();
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+
+                navigator.clipboard.writeText(textToCopy).then(() => {
+
+                    showFeedback(event.target.closest('.contato-card'));
+
+                }).catch(err => {
+
+                    console.error('Falha ao copiar: ', err);
+
+                });
+
+            } else {
+
+                const textarea = document.createElement('textarea');
+
+                textarea.value = textToCopy;
+
+                document.body.appendChild(textarea);
+
+                textarea.select();
+
+                try {
+
+                    document.execCommand('copy');
+
+                    showFeedback(event.target.closest('.contato-card'));
+
+                } catch (err) {
+
+                    console.error('Falha ao copiar (execCommand): ', err);
+
+                }
+
+                document.body.removeChild(textarea);
+
+            }
+
+        }
+
+
+
+        function showFeedback(element) {
+
+            const originalContent = element.innerHTML;
+
+            element.innerHTML = `
+
+                <div class="text-center">
+
+                    <i class="fa-solid fa-check-circle text-2xl text-green-500 mb-2"></i>
+
+                    <div class="text-xs text-zinc-500 uppercase font-semibold tracking-wide">Copiado!</div>
+
+                </div>`;
+
+            
+
+            setTimeout(() => {
+
+                element.innerHTML = originalContent;
+
+            }, 1500);
+
+        }
+
+
+
+        // Fechar cards de contato ao clicar fora
+
+        document.addEventListener('click', (e) => {
+
+            if (!e.target.closest('.contato-card')) {
+
+                document.querySelectorAll('.contato-card.active').forEach(item => {
+
+                    item.classList.remove('active');
+
+                });
+
+            }
+
+        });
+
+
+
+        // --- Funções para a API do Gemini ---
+
+        function showAutomationModal() {
+
+            document.getElementById('automation-modal').classList.remove('hidden');
+
+        }
+
+
+
+        function showBlockchainModal() {
+
+            document.getElementById('blockchain-modal').classList.remove('hidden');
+
+        }
+
+
+
+        function closeModal(id) {
+
+            document.getElementById(id).classList.add('hidden');
+
+            // Resetar o conteúdo do modal ao fechar
+
+            const promptId = id.replace('-modal', '-prompt');
+
+            const termId = id.replace('-modal', '-term');
+
+            if (document.getElementById(promptId)) {
+
+                document.getElementById(promptId).value = '';
+
+            }
+
+            if (document.getElementById(termId)) {
+
+                document.getElementById(termId).value = '';
+
+            }
+
+            document.getElementById(id.replace('-modal', '-response')).classList.add('hidden');
+
+            document.getElementById(id.replace('-modal', '-text-result')).innerText = '';
+
+        }
+
+
+
+        async function generateAutomationPlan() {
+
+            const prompt = document.getElementById('automation-prompt').value;
+
+            if (!prompt) return;
+
+
+
+            const responseDiv = document.getElementById('automation-response');
+
+            const loadingDiv = document.getElementById('automation-loading');
+
+            const resultDiv = document.getElementById('automation-text-result');
+
+
+
+            responseDiv.classList.remove('hidden');
+
+            loadingDiv.style.display = 'block';
+
+            resultDiv.innerText = '';
+
+            
+
+            try {
+
+                const llmPrompt = `Matheus Melo, especialista em IA e Automação, recebeu o seguinte pedido de um cliente: "${prompt}". Como especialista, elabore um plano de automação básico e profissional para resolver este problema. O plano deve incluir: uma breve introdução, a solução proposta em 2-3 pontos-chave, e um breve resumo do impacto esperado. Responda em português.`;
+
+                let chatHistory = [];
+
+                chatHistory.push({ role: "user", parts: [{ text: llmPrompt }] });
+
+                const payload = { contents: chatHistory };
+
+                const apiKey = ""
+
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+                
+
+                const response = await fetch(apiUrl, {
+
+                    method: 'POST',
+
+                    headers: { 'Content-Type': 'application/json' },
+
+                    body: JSON.stringify(payload)
+
+                });
+
+
+
+                if (!response.ok) {
+
+                    throw new Error(`Erro na API: ${response.status} ${response.statusText}`);
+
+                }
+
+
+
+                const result = await response.json();
+
+                const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                resultDiv.innerText = text || 'Não foi possível gerar um plano. Tente novamente.';
+
+            } catch (error) {
+
+                console.error("Erro ao gerar plano de automação:", error);
+
+                resultDiv.innerText = `Ocorreu um erro ao gerar o plano. Por favor, tente novamente.`;
+
+            } finally {
+
+                loadingDiv.style.display = 'none';
+
+            }
+
+        }
+
+
+
+        async function explainBlockchainConcept() {
+
+            const term = document.getElementById('blockchain-term').value;
+
+            if (!term) return;
+
+            
+
+            const responseDiv = document.getElementById('blockchain-response');
+
+            const loadingDiv = document.getElementById('blockchain-loading');
+
+            const resultDiv = document.getElementById('blockchain-text-result');
+
+
+
+            responseDiv.classList.remove('hidden');
+
+            loadingDiv.style.display = 'block';
+
+            resultDiv.innerText = '';
+
+
+
+            try {
+
+                const llmPrompt = `Explique o seguinte conceito de blockchain ou cripto de forma simples, direta e profissional, como se estivesse explicando para alguém que é novo no assunto. O conceito é: "${term}". Responda em português.`;
+
+                let chatHistory = [];
+
+                chatHistory.push({ role: "user", parts: [{ text: llmPrompt }] });
+
+                const payload = { contents: chatHistory };
+
+                const apiKey = ""
+
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+
+
+                const response = await fetch(apiUrl, {
+
+                    method: 'POST',
+
+                    headers: { 'Content-Type': 'application/json' },
+
+                    body: JSON.stringify(payload)
+
+                });
+
+                
+
+                if (!response.ok) {
+
+                    throw new Error(`Erro na API: ${response.status} ${response.statusText}`);
+
+                }
+
+
+
+                const result = await response.json();
+
+                const text = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                resultDiv.innerText = text || 'Não foi possível explicar o conceito. Tente novamente.';
+
+            } catch (error) {
+
+                console.error("Erro ao explicar conceito:", error);
+
+                resultDiv.innerText = `Ocorreu um erro ao explicar o conceito. Por favor, tente novamente.`;
+
+            } finally {
+
+                loadingDiv.style.display = 'none';
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
