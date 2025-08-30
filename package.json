@@ -1,13 +1,16 @@
 {
-  "name": "site-portifolio",
+  "name": "matheus-melo-portfolio",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Portfólio profissional de Matheus Melo - Especialista em Blockchain, IA e Tecnologias Emergentes",
+  "main": "index.html",
   "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./output.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./output.css --minify",
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["portfolio", "blockchain", "ai", "automation", "crypto"],
+  "author": "Matheus Melo",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {

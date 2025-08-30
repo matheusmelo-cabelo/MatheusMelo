@@ -1,4 +1,373 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<!-- Todo o conteúdo HTML que compartilhei anteriormente -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus Melo - Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-zinc-950 text-white min-h-screen antialiased">
+    <div class="container mx-auto px-4 md:px-6 max-w-6xl py-8 md:py-16">
+        <!-- Header -->
+        <header class="text-center mb-12 md:mb-20">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-white to-yellow-500">Matheus Melo</h1>
+            <p class="text-lg md:text-xl lg:text-2xl text-yellow-400 font-semibold mb-6">Especialista em Blockchain, IA & Tecnologias Emergentes</p>
+            <div class="flex flex-col md:flex-row md:space-x-4 justify-center items-center mb-8">
+                <div class="flex items-center space-x-3 mb-3 md:mb-0">
+                    <span class="text-xl md:text-2xl">🧠</span>
+                    <span class="text-xl md:text-2xl">🛸</span>
+                    <span class="text-xl md:text-2xl">🤝</span>
+                </div>
+                <div class="text-center">
+                    <span class="text-white text-sm md:text-base lg:text-lg font-medium">Bitcoin • Inteligência Artificial • Impacto Social</span>
+                </div>
+            </div>
+            <div class="flex justify-center space-x-6 text-xl md:text-2xl lg:text-3xl">
+                <a href="https://github.com/matheusmelo-cabelo" target="_blank" class="text-white hover:text-yellow-400 transition-colors duration-300 transform hover:scale-110">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/matheus-melo-3ab20b325" target="_blank" class="text-white hover:text-yellow-400 transition-colors duration-300 transform hover:scale-110">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://instagram.com/0matheusmelo" target="_blank" class="text-white hover:text-yellow-400 transition-colors duration-300 transform hover:scale-110">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Seção Quem Sou Eu -->
+        <section class="mb-16 md:mb-24 pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">Quem Sou Eu</h2>
+            <p class="text-sm md:text-base lg:text-lg text-zinc-300 leading-relaxed text-left">
+                Sou profissional de tecnologia, com foco em inteligência artificial e criptomoedas. Atuo desde 2020 no mercado de criptoativos, principalmente com Bitcoin e estratégias de autocustódia, e expandi minha atuação para a área de IA, explorando aplicações práticas para negócios e pessoas.
+                <br><br>
+                Minha experiência combina conhecimento técnico, visão estratégica de investimentos e interesse por soluções inovadoras. Meu objetivo é conectar tecnologia e impacto humano, ajudando pessoas e organizações a navegarem o futuro digital de forma segura e inteligente.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
+                <div class="bg-yellow-900/10 border border-yellow-800/30 rounded-lg p-4 text-center">
+                    <span class="block text-2xl md:text-3xl mb-2">₿</span>
+                    <span class="text-xs md:text-sm text-yellow-400 font-semibold">Bitcoin desde 2020</span>
+                </div>
+                <div class="bg-yellow-900/10 border border-yellow-800/30 rounded-lg p-4 text-center">
+                    <span class="block text-2xl md:text-3xl mb-2">🤖</span>
+                    <span class="text-xs md:text-sm text-yellow-400 font-semibold">IA Aplicada</span>
+                </div>
+                <div class="bg-yellow-900/10 border border-yellow-800/30 rounded-lg p-4 text-center">
+                    <span class="block text-2xl md:text-3xl mb-2">🤝</span>
+                    <span class="text-xs md:text-sm text-yellow-400 font-semibold">Impacto Social</span>
+                </div>
+                <div class="bg-yellow-900/10 border border-yellow-800/30 rounded-lg p-4 text-center">
+                    <span class="block text-2xl md:text-3xl mb-2">🚀</span>
+                    <span class="text-xs md:text-sm text-yellow-400 font-semibold">1000+ Clientes</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Linha do Tempo -->
+        <section class="mb-16 md:mb-24 pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">Minha Jornada</h2>
+            <div class="relative max-w-xl mx-auto">
+                <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-yellow-800/30"></div>
+                
+                <div class="relative pl-12 pb-8">
+                    <div class="absolute left-3 top-2 w-4 h-4 rounded-full bg-yellow-400 border-2 border-zinc-950"></div>
+                    <p class="font-semibold text-white text-lg">2013</p>
+                    <p class="text-zinc-300">Ouço falar do Bitcoin pela primeira vez, mas por ser adolescente e de família humilde, ninguém quis investir na "tal moedinha" que um jovem insistia para comprar.</p>
+                </div>
+
+                <div class="relative pl-12 pb-8">
+                    <div class="absolute left-3 top-2 w-4 h-4 rounded-full bg-yellow-400 border-2 border-zinc-950"></div>
+                    <p class="font-semibold text-white text-lg">2020</p>
+                    <p class="text-zinc-300">Começo a estudar Bitcoin e o conceito de autocustódia, mergulhando no mercado de criptoativos.</p>
+                </div>
+
+                <div class="relative pl-12 pb-8">
+                    <div class="absolute left-3 top-2 w-4 h-4 rounded-full bg-yellow-400 border-2 border-zinc-950"></div>
+                    <p class="font-semibold text-white text-lg">2022</p>
+                    <p class="text-zinc-300">Entro em sociedade em uma empresa de consultoria em cripto e trading, e me torno sócio do time de E-sports Angels, que alcançou o 4º lugar da LBFF.</p>
+                </div>
+
+                <div class="relative pl-12 pb-8">
+                    <div class="absolute left-3 top-2 w-4 h-4 rounded-full bg-yellow-400 border-2 border-zinc-950"></div>
+                    <p class="font-semibold text-white text-lg">2023</p>
+                    <p class="text-zinc-300">Inicio a consultoria para o projeto de trading autônomo com IA, aplicando meu conhecimento em gestão de risco.</p>
+                </div>
+
+                <div class="relative pl-12 pb-8">
+                    <div class="absolute left-3 top-2 w-4 h-4 rounded-full bg-yellow-400 border-2 border-zinc-950"></div>
+                    <p class="font-semibold text-white text-lg">2024</p>
+                    <p class="text-zinc-300">Expando meu foco para a Inteligência Artificial e suas aplicações, especialmente em automação de processos.</p>
+                </div>
+                
+                <div class="relative pl-12">
+                    <div class="absolute left-3 top-2 w-4 h-4 rounded-full bg-yellow-400 border-2 border-zinc-950"></div>
+                    <p class="font-semibold text-white text-lg">2025</p>
+                    <p class="text-zinc-300">Começo a implementar soluções de IA para otimizar fluxos de trabalho em empresas, focando em gerar mais tempo livre.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Áreas de Atuação (Flip Cards) -->
+        <section class="mb-16 md:mb-24 pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">Áreas de Atuação</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <!-- Card Automação com IA -->
+                <div class="group bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-900/40 relative h-[280px]">
+                    <div class="competencia-inner transform-gpu transition-transform duration-500 ease-in-out">
+                        <div class="absolute inset-0 p-8 flex flex-col justify-between backface-hidden">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <i class="fa-solid fa-robot text-2xl text-yellow-400"></i>
+                                <h3 class="text-xl font-semibold text-white">Automação com IA</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Desenvolvimento de Agentes</span>
+                                <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Otimização de Processos</span>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute inset-0 p-8 flex flex-col justify-between backface-hidden [transform:rotateY(180deg)]">
+                            <h4 class="text-lg font-semibold text-yellow-400 mb-4">Recursos de IA</h4>
+                            <div class="flex flex-col space-y-3">
+                                <button onclick="showAutomationModal()" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors">
+                                    <i class="fa-solid fa-magic"></i><span>Gerar Plano de Automação</span>
+                                </button>
+                                <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white">
+                                    <i class="fa-solid fa-chart-line"></i><span>Case de Sucesso</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Blockchain & Cripto -->
+                <div class="group bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-900/40 relative h-[280px]">
+                    <div class="competencia-inner transform-gpu transition-transform duration-500 ease-in-out">
+                        <div class="absolute inset-0 p-8 flex flex-col justify-between backface-hidden">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <i class="fa-brands fa-bitcoin text-2xl text-yellow-400"></i>
+                                <h3 class="text-xl font-semibold text-white">Blockchain & Cripto</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">4+ Anos de Experiência</span>
+                                <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Autocustódia</span>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute inset-0 p-8 flex flex-col justify-between backface-hidden [transform:rotateY(180deg)]">
+                            <h4 class="text-lg font-semibold text-yellow-400 mb-4">Recursos de Cripto</h4>
+                            <div class="flex flex-col space-y-3">
+                                <button onclick="showBlockchainModal()" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white transition-colors">
+                                    <i class="fa-solid fa-lightbulb"></i><span>Explicar Conceito</span>
+                                </button>
+                                <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white">
+                                    <i class="fa-solid fa-lock"></i><span>Hardware Wallets</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Mercado Financeiro -->
+                <div class="group bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-900/40 relative h-[280px]">
+                    <div class="competencia-inner transform-gpu transition-transform duration-500 ease-in-out">
+                        <div class="absolute inset-0 p-8 flex flex-col justify-between backface-hidden">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <i class="fa-solid fa-chart-line text-2xl text-yellow-400"></i>
+                                <h3 class="text-xl font-semibold text-white">Mercado Financeiro</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Planejamento Financeiro</span>
+                                <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Gestão de Risco</span>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute inset-0 p-8 flex flex-col justify-between backface-hidden [transform:rotateY(180deg)]">
+                            <h4 class="text-lg font-semibold text-yellow-400 mb-4">Recursos de Mercado</h4>
+                            <div class="flex flex-col space-y-3">
+                                <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white">
+                                    <i class="fa-solid fa-certificate"></i><span>CEA ANBIMA</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white">
+                                    <i class="fa-brands fa-telegram-plane"></i><span>Análises de Mercado</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Produção de Conteúdo -->
+                <div class="group bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-900/40 relative h-[280px]">
+                    <div class="competencia-inner transform-gpu transition-transform duration-500 ease-in-out">
+                        <div class="absolute inset-0 p-8 flex flex-col justify-between backface-hidden">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <i class="fa-solid fa-file-invoice text-2xl text-yellow-400"></i>
+                                <h3 class="text-xl font-semibold text-white">Produção de Conteúdo</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Curadoria</span>
+                                <span class="bg-yellow-900/30 text-yellow-400 text-sm font-medium px-4 py-1.5 rounded-full border border-yellow-800/30">Vídeos Educacionais</span>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute inset-0 p-8 flex flex-col justify-between backface-hidden [transform:rotateY(180deg)]">
+                            <h4 class="text-lg font-semibold text-yellow-400 mb-4">Trabalhos e Colaborações</h4>
+                            <div class="flex flex-col space-y-3">
+                                <a href="https://www.youtube.com/@omatheusmelo0" target="_blank" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white">
+                                    <i class="fa-brands fa-youtube"></i><span>Canal no YouTube</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-2 p-2 bg-yellow-900/30 border border-yellow-800/30 rounded-md text-sm text-zinc-300 hover:bg-yellow-900/50 hover:text-white">
+                                    <i class="fa-solid fa-pen-to-square"></i><span>Blog Pessoal</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Projetos Relevantes -->
+        <section class="mb-16 md:mb-24 pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">Projetos Relevantes</h2>
+            <div class="space-y-8">
+                <article class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-yellow-900/40">
+                    <h3 class="text-xl md:text-2xl font-semibold text-white mb-2">Blockchain para Missões Humanitárias</h3>
+                    <p class="text-base text-zinc-400 mb-4 leading-relaxed">
+                        Plataforma para transferências instantâneas e seguras para missionários em países restritivos, eliminando barreiras governamentais e reduzindo custos.
+                    </p>
+                    <p class="text-base text-yellow-400 font-semibold mb-2">
+                        Impacto: <span class="text-white font-normal">Transferências 24/7 resistentes à censura, eliminação de barreiras governamentais.</span>
+                    </p>
+                    <span class="inline-block bg-yellow-900/30 text-yellow-400 px-4 py-1.5 rounded-full text-sm font-medium border border-yellow-800/30">Em desenvolvimento</span>
+                </article>
+
+                <article class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-yellow-900/40">
+                    <h3 class="text-xl md:text-2xl font-semibold text-white mb-2">Agente de IA para Consultório Médico</h3>
+                    <p class="text-base text-zinc-400 mb-4 leading-relaxed">
+                        Solução de automação que eliminou a perda de 100 leads por dia, otimizando o fluxo de atendimento do consultório médico.
+                    </p>
+                    <p class="text-base text-yellow-400 font-semibold mb-2">
+                        Impacto: <span class="text-white font-normal">200 leads/dia atendidos, ROI em tráfego preservado.</span>
+                    </p>
+                    <span class="inline-block bg-green-900/30 text-green-400 px-4 py-1.5 rounded-full text-sm font-medium border border-green-800/30">Implementado</span>
+                </article>
+                
+                <article class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-2xl p-8 transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl hover:shadow-yellow-900/40">
+                    <h3 class="text-xl md:text-2xl font-semibold text-white mb-2">Plataforma de Trading Autônomo com IA</h3>
+                    <p class="text-base text-zinc-400 mb-4 leading-relaxed">
+                        Sistema de análise de 1000+ ativos simultaneamente com decisões automatizadas e gestão de risco inteligente.
+                    </p>
+                    <p class="text-base text-yellow-400 font-semibold mb-2">
+                        Impacto: <span class="text-white font-normal">80% de taxa de acerto, gestão de risco automatizada.</span>
+                    </p>
+                    <span class="inline-block bg-yellow-900/30 text-yellow-400 px-4 py-1.5 rounded-full text-sm font-medium border border-yellow-800/30">Em desenvolvimento final</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção Visão & Filosofia -->
+        <section class="mb-16 md:mb-24 pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">Visão & Filosofia</h2>
+            <div class="bg-yellow-900/10 border border-yellow-800/30 rounded-2xl p-8 md:p-12 text-center relative filosofia-quote">
+                <p class="text-lg md:text-xl text-zinc-300 leading-relaxed italic">
+                    Acredito que o futuro pertence àqueles que conseguem unir conhecimento, tecnologia e propósito. Minha missão é explorar as fronteiras entre inteligência artificial e blockchain para criar soluções que não dependem de governos ou instituições, mas sim da colaboração entre pessoas.
+                    <br><br>
+                    Sonho com um mundo onde a tecnologia cuida do "online" para que possamos viver mais no "offline" – onde sistemas inteligentes automatizam o trabalho complexo, liberando nosso tempo para o que realmente importa: família, crescimento pessoal e qualidade de vida.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section class="pt-8 md:pt-16 border-t border-yellow-800 border-opacity-30">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-yellow-400 mb-8 md:mb-12 relative after:content-[''] after:block after:w-16 after:h-0.5 after:bg-yellow-400 after:mx-auto after:mt-4">Contato</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+                <div class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-xl p-6 text-center transition-transform duration-300 hover:scale-105 cursor-pointer contato-card" onclick="toggleContact(this)">
+                    <div class="contato-content">
+                        <div class="text-xl text-yellow-400 mb-2"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="text-xs text-zinc-500 uppercase font-semibold tracking-wide">E-mail</div>
+                    </div>
+                    <div class="contato-info">
+                        <div class="text-base text-yellow-400 truncate font-medium">backup.matheusmelo@gmail.com</div>
+                        <button class="bg-yellow-900/20 text-yellow-400 text-xs px-2 py-1 rounded-md mt-2 hover:bg-yellow-900/40 transition-colors" onclick="copyContact('backup.matheusmelo@gmail.com', event)">Copiar</button>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-xl p-6 text-center transition-transform duration-300 hover:scale-105 cursor-pointer contato-card" onclick="toggleContact(this)">
+                    <div class="contato-content">
+                        <div class="text-xl text-yellow-400 mb-2"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="text-xs text-zinc-500 uppercase font-semibold tracking-wide">WhatsApp</div>
+                    </div>
+                    <div class="contato-info">
+                        <div class="text-base text-yellow-400 truncate font-medium">+55 (21) 99376-5041</div>
+                        <button class="bg-yellow-900/20 text-yellow-400 text-xs px-2 py-1 rounded-md mt-2 hover:bg-yellow-900/40 transition-colors" onclick="copyContact('+55 (21) 99376-5041', event)">Copiar</button>
+                    </div>
+                </div>
+
+                <a href="https://instagram.com/0matheusmelo" target="_blank" class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-xl p-6 text-center transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col justify-center">
+                    <div class="text-xl text-yellow-400 mb-2"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="text-xs text-zinc-500 uppercase font-semibold tracking-wide">Instagram</div>
+                    <div class="text-base text-white truncate font-medium mt-1">@0matheusmelo</div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/matheus-melo-3ab20b325" target="_blank" class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-xl p-6 text-center transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col justify-center">
+                    <div class="text-xl text-yellow-400 mb-2"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <div class="text-xs text-zinc-500 uppercase font-semibold tracking-wide">LinkedIn</div>
+                    <div class="text-base text-white truncate font-medium mt-1">linkedin.com/in/matheus-melo-3ab20b325</div>
+                </a>
+
+                <a href="https://www.youtube.com/@omatheusmelo0" target="_blank" class="bg-zinc-800 border border-yellow-800 border-opacity-30 rounded-xl p-6 text-center transition-transform duration-300 hover:scale-105 cursor-pointer flex flex-col justify-center">
+                    <div class="text-xl text-yellow-400 mb-2"><i class="fa-brands fa-youtube"></i></div>
+                    <div class="text-xs text-zinc-500 uppercase font-semibold tracking-wide">YouTube</div>
+                    <div class="text-base text-white truncate font-medium mt-1">@omatheusmelo0</div>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal Automação com IA -->
+    <div id="automation-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-zinc-900 border border-yellow-800/30 rounded-2xl p-8 w-full max-w-lg relative">
+            <button class="absolute top-4 right-4 text-zinc-400 hover:text-white" onclick="closeModal('automation-modal')">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">Obter um Plano de Automação ✨</h3>
+            <p class="text-zinc-300 mb-4">Descreva um problema ou processo da sua empresa em que a IA poderia ajudar. O Gemini vai sugerir um plano básico para você.</p>
+            <textarea id="automation-prompt" class="w-full h-32 bg-zinc-800 border border-yellow-800/30 rounded-lg p-4 text-white placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-yellow-400 resize-none mb-4" placeholder="Ex: 'Otimizar o processo de triagem de currículos para 1000 candidatos por mês.'"></textarea>
+            <button id="automation-generate-btn" class="w-full bg-yellow-500 hover:bg-yellow-600 text-zinc-900 font-bold py-3 rounded-full transition-colors duration-200" onclick="generateAutomationPlan()">Gerar Plano de Automação</button>
+            <div id="automation-response" class="mt-6 p-4 bg-zinc-800 border border-yellow-800/30 rounded-lg hidden">
+                <div id="automation-loading" class="text-center" style="display: none;">
+                    <i class="fas fa-spinner fa-spin text-yellow-400 text-2xl"></i>
+                    <p class="text-zinc-400 mt-2">Gerando plano...</p>
+                </div>
+                <p id="automation-text-result" class="text-zinc-300 whitespace-pre-wrap"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Blockchain & Cripto -->
+    <div id="blockchain-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-zinc-900 border border-yellow-800/30 rounded-2xl p-8 w-full max-w-lg relative">
+            <button class="absolute top-4 right-4 text-zinc-400 hover:text-white" onclick="closeModal('blockchain-modal')">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-yellow-400 mb-4">Explicar Conceito de Cripto ✨</h3>
+            <p class="text-zinc-300 mb-4">Digite um termo técnico de blockchain ou cripto e o Gemini irá explicar de forma simples e direta.</p>
+            <input type="text" id="blockchain-term" class="w-full bg-zinc-800 border border-yellow-800/30 rounded-lg p-4 text-white placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-yellow-400 mb-4" placeholder="Ex: 'Proof of Work' ou 'Autocustódia'">
+            <button id="blockchain-generate-btn" class="w-full bg-yellow-500 hover:bg-yellow-600 text-zinc-900 font-bold py-3 rounded-full transition-colors duration-200" onclick="explainBlockchainConcept()">Explicar Conceito</button>
+            <div id="blockchain-response" class="mt-6 p-4 bg-zinc-800 border border-yellow-800/30 rounded-lg hidden">
+                <div id="blockchain-loading" class="text-center" style="display: none;">
+                    <i class="fas fa-spinner fa-spin text-yellow-400 text-2xl"></i>
+                    <p class="text-zinc-400 mt-2">Explicando...</p>
+                </div>
+                <p id="blockchain-text-result" class="text-zinc-300 whitespace-pre-wrap"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
 </html>

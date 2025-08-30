@@ -1,7 +1,13 @@
 // Função para virar os cards de competência
-function flipCard(card) {
-    card.classList.toggle('flipped');
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const innerElements = document.querySelectorAll('.competencia-inner');
+    innerElements.forEach(el => {
+        el.addEventListener('click', (e) => {
+            const card = e.currentTarget;
+            card.classList.toggle('is-flipped');
+        });
+    });
+});
 
 // Função para alternar a exibição do card de contato
 function toggleContact(element) {
@@ -59,11 +65,9 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// --- Funções para a API do Gemini (Refatorado) ---
-
-// Função centralizada para chamar a API
+// --- Funções para a API do Gemini ---
 async function callGeminiApi(prompt) {
-    const apiUrl = "/api/gemini"; // A URL da sua API no Vercel
+    const apiUrl = "/api/gemini";
 
     try {
         const response = await fetch(apiUrl, {
@@ -136,3 +140,32 @@ function showBlockchainModal() {
 function closeModal(id) {
     document.getElementById(id).classList.add('hidden');
 }
+
+// Fechar modais ao clicar fora
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('fixed')) {
+        e.target.classList.add('hidden');
+    }
+});
+
+// Animações de entrada para as seções
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in');
+        }
+    });
+}, observerOptions);
+
+// Observar todas as seções
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
