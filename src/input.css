@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Configuração de fonte padrão */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 /* Estilos personalizados para flip cards */
 .competencia-inner {
     transform-style: preserve-3d;

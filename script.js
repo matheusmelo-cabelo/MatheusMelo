@@ -137,6 +137,11 @@ function showBlockchainModal() {
     document.getElementById('blockchain-modal').classList.remove('hidden');
 }
 
+function showConsultoriaModal() {
+    // Por enquanto, redireciona para WhatsApp ou abre modal de contato
+    window.open('https://wa.me/5521993765041?text=Olá! Gostaria de agendar uma consultoria sobre mercado financeiro.', '_blank');
+}
+
 function closeModal(id) {
     document.getElementById(id).classList.add('hidden');
 }
