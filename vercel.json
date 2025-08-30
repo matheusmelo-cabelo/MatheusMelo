@@ -1,0 +1,8 @@
+{
+  "build": {
+    "src": "**",
+    "use": "@vercel/static-build"
+  },
+  "outputDirectory": ".",
+  "framework": null
+}
